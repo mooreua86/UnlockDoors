@@ -15,6 +15,12 @@
       function openLeftDoor() {
         document.getElementById("leftDoorStatus").innerHTML = "Open";
         document.getElementById("rightDoor").removeAttribute("disabled");
+        console.log("Left door opened")
+      }
+      function openRightDoor() {
+        document.getElementById("rightDoorStatus").innerHTML = "Open";
+        document.getElementById("resetDoors").removeAttribute("disabled");
+        console.log("Right door opened")
       }
       /**
        * This function enables the reset door button and also updates the
@@ -30,7 +36,11 @@
        * doors so they don't say they're open.
       **/
       function reset(){
+        document.getElementById("leftDoorStatus").innerHTML = "";
+        document.getElementById("rightDoorStatus").innerHTML = "";
         document.getElementById("rightDoor").setAttribute("disabled", "");
+        document.getElementById("resetDoors").setAttribute("disabled", "");
+        window.alert("Everything reset!")
       }
     </script>
   </head>
